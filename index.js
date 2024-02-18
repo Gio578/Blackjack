@@ -20,6 +20,8 @@ let cardImage3 = document.getElementById("cardImage3")
 //let playerEl = document.getElementById("player-el")
 //playerEl.textContent = player.name + ": $" + player.chips
 
+// hello Im back
+
 /////////////////
 function getRandomCard() {
     let randomNumber = Math.floor(Math.random() * 13) + 1
