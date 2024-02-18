@@ -22,6 +22,8 @@ let cardImage3 = document.getElementById("cardImage3")
 
 // hello Im back
 
+// some more changes
+
 /////////////////
 function getRandomCard() {
     let randomNumber = Math.floor(Math.random() * 13) + 1
