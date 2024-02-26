@@ -4,6 +4,8 @@ let isAlive = false
 let sum = 0
 let message = ""
 
+let fourthcard = false
+
 let messageEl = document.getElementById("message-el")
 //let sumEl = document.getElementById("sum-el")
 let sumEl = document.querySelector("#sum-el")
@@ -11,6 +13,7 @@ let cardsEl = document.getElementById("cards-el")
 let cardImage1 = document.getElementById("cardImage1")
 let cardImage2 = document.getElementById("cardImage2")
 let cardImage3 = document.getElementById("cardImage3")
+let cardImage4 = document.getElementById("cardImage4")
 
 //let player = {
 //    name: "Gio",
@@ -40,13 +43,21 @@ let gameCount = 0
 
 function startGame() {
     console.log(gameCount)
-    if (gameCount > 1) {
+
+    hasBlackJack = false
+
+    if (gameCount >= 1) {
         cardImage1.src = ''
     }
 
-    if (gameCount > 1) {
+    if (gameCount >= 1) {
         cardImage2.src = ''
     }
+
+    if (gameCount >= 1) {
+        cardImage3.src = ''
+    }
+
     isAlive = true
     let firstCard = getRandomCard()
     console.log(firstCard)
@@ -167,7 +178,7 @@ function renderGame() {
     //if ()
 }
 
-cardImage3.src = ''
+//cardImage3.src = ''
 
 function newCard() {
 
@@ -176,6 +187,7 @@ function newCard() {
     }
 
     if (isAlive === true && hasBlackJack === false) {
+        //fourthcard = true
         let thirdCard = getRandomCard()
 
         if (thirdCard == 11) {
@@ -222,6 +234,6 @@ function newCard() {
 
         cards.push(thirdCard)
 
-        renderGame()
+        renderGame();
     }
 }
